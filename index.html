@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHATHA ESTATE - Real Estate</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="/" class="logo">DASHATHA<span>ESTATE</span></a>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('login')">Login</a>
+        <a href="#" onclick="showPage('register')">Register</a>
+    </nav>
+</header>
+
+<!-- HOME PAGE -->
+<section id="home" class="page">
+    <div class="hero">
+        <div class="hero-content">
+            <p class="tagline">FIND YOUR DREAM PROPERTY</p>
+            <h1>Discover a Place You'll Love to Call Home</h1>
+            <p>Explore beautiful homes, luxury villas and modern apartments.</p>
+            <button onclick="showPage('register')">
+                Get Started
+            </button>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Welcome to DASHATHA ESTATE</h2>
+        <p>Find the perfect property for your lifestyle and budget.</p>
+
+        <div class="features">
+            <div class="feature">🏡 Quality Properties</div>
+            <div class="feature">📍 Best Locations</div>
+            <div class="feature">💰 Affordable Prices</div>
+        </div>
+    </div>
+</section>
+
+<!-- REGISTRATION PAGE -->
+<section id="register" class="page hidden">
+    <div class="form-container">
+        <h2>Create Account</h2>
+        <p>Join DreamHome today!</p>
+
+        <form id="registerForm">
+            <label>Full Name</label>
+            <input type="text" id="regName" required placeholder="Enter your name">
+
+            <label>Email</label>
+            <input type="email" id="regEmail" required placeholder="Enter your email">
+
+            <label>Phone Number</label>
+            <input type="tel" id="regPhone" placeholder="Enter phone number">
+
+            <label>Password</label>
+            <input type="password" id="regPassword" required minlength="6" placeholder="Create password">
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="registerMessage" class="message"></p>
+
+        <p>Already have an account?
+            <a href="#" onclick="showPage('login')">Login</a>
+        </p>
+    </div>
+</section>
+
+<!-- LOGIN PAGE -->
+<section id="login" class="page hidden">
+    <div class="form-container">
+        <h2>Welcome Back</h2>
+        <p>Login to your DASHATHA ESTATE account.</p>
+
+        <form id="loginForm">
+            <label>Email</label>
+            <input type="email" id="loginEmail" required placeholder="Enter your email">
+
+            <label>Password</label>
+            <input type="password" id="loginPassword" required placeholder="Enter your password">
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="loginMessage" class="message"></p>
+
+        <p>Don't have an account?
+            <a href="#" onclick="showPage('register')">Register</a>
+        </p>
+    </div>
+</section>
+
+<!-- DASHBOARD PAGE -->
+<section id="dashboard" class="page hidden">
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div>
+                <p class="tagline">DASHATHA ESTATE PROPERTIES</p>
+                <h1 id="welcome">Welcome!</h1>
+                <p>Explore our available properties.</p>
+            </div>
+
+            <button onclick="logout()" class="logout">
+                Logout
+            </button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search by property or location">
+
+            <button onclick="searchProperties()">Search</button>
+        </div>
+
+        <h2>Available Properties</h2>
+
+        <p id="propertyMessage"></p>
+
+        <div id="propertyList" class="property-grid"></div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 DASHATHA Real Estate. All Rights Reserved.</p>
+</footer>
+
+<script src="/script.js"></script>
+
+</body>
+</html>

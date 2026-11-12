@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #263238;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #142b46;
+}
+
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #d9ad58;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 22px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d9ad58;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 60px 9%;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(15,30,50,.9), rgba(15,30,50,.2)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1500")
+        center/cover;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.tagline {
+    color: #d9ad58;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+button {
+    background: #c99a43;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #a97c2d;
+}
+
+.hero button {
+    margin-top: 25px;
+}
+
+.section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    color: #142b46;
+    margin-bottom: 15px;
+}
+
+.section p {
+    color: #66717d;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.feature {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px #00000012;
+    font-weight: bold;
+}
+
+.page {
+    min-height: 75vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Registration and Login */
+
+.form-container {
+    width: 90%;
+    max-width: 430px;
+    margin: 50px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px #00000012;
+}
+
+.form-container h2 {
+    color: #142b46;
+    margin-bottom: 12px;
+}
+
+.form-container > p {
+    margin-top: 15px;
+    color: #66717d;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form button {
+    margin-top: 12px;
+}
+
+.form-container a {
+    color: #bd8c34;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.message {
+    color: #b33b36 !important;
+}
+
+/* Dashboard */
+
+.dashboard {
+    padding: 45px 7%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.dashboard h1 {
+    color: #142b46;
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.dashboard h2 {
+    margin: 30px 0 15px;
+    color: #142b46;
+}
+
+.logout {
+    background: #142b46;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 700px;
+    margin: 25px 0;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.property-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px #00000012;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 20px;
+}
+
+.property-info h3 {
+    color: #142b46;
+    margin-bottom: 12px;
+}
+
+.property-info p {
+    margin: 8px 0;
+    color: #66717d;
+}
+
+.property-info .price {
+    color: #bd8c34;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+footer {
+    background: #142b46;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+@media(max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .form-container {
+        padding: 25px;
+    }
+}
